@@ -24,6 +24,8 @@ html {
     line-height: 2em;
 }
 
+
+
 svg + p {
     color: var(--orange);
     font-family: 'Bebas Neue', sans-serif;
@@ -45,21 +47,27 @@ h2 {
     text-align: center;
 }
 p {
-    font-size: 25px;
+    font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     text-align: justify;
+}
+
+dd{
+    font-family: 'Montserrat', sans-serif;
 }
 
 #dishes {
     background-color: var(--teal);
     margin-top: 20px;
     border-bottom: 30px solid var(--white);
+    
 }
 
-dt {
+h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
+    margin-left: 40px;
 }
 
 .ft {
@@ -82,11 +90,7 @@ footer img{
 
 
 /* Responsive */
-@media screen and (min-width: 550px) {
-    nav {
-        background-color: #f1f1f1;
-      }
-      
+@media screen and (min-width: 414px) {
       .menu-icon {
         display: none;
         cursor: pointer;
@@ -106,6 +110,9 @@ footer img{
     .menu {
         display: none;
         text-align: center;
+      }
+      .menu img {
+        width: 100px;
       }
     
       .menu li {
@@ -165,6 +172,19 @@ footer img{
         display: flex;
         justify-content: center;
       }
+      #dishes {
+        padding-top: 10px;
+      }
+
+      #dish-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+      }
+
+      #dish-img {
+        margin-right: 20px;
+      } 
+
 
       #street p{
         text-align: justify;
@@ -191,15 +211,22 @@ footer img{
         grid-template-columns: repeat(2, 1fr);
       }
 
+
 }
 
 
-@media screen and (min-width: 836px) {
+@media screen and (min-width: 768px) {
     .menu{
         display: grid;
         margin-right: 10px;
         grid-auto-flow: column;
+        border-bottom: var(--white);
     }
+    .menu img{
+        width: 50px;
+    }
+
+
     .search-form {
         align-items: center;
         text-align: center;
@@ -225,14 +252,75 @@ footer img{
         background-color: #555;
       }
 
+      #dish-col{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      #dishes{
+        margin-top: 190px;
+      }
+
+      #dishes h2 {
+       text-align: center;
+        padding-top: 30px;
+      }
+
+      footer img{
+        float: left;
+      }
+
+      #details p{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 20px;
+      }
+
+      #ingredients {
+        float: left;
+        margin-right: 50px;
+        text-align: justify;
+      }
+      #directions {
+        text-align: justify;
+      }
+
+      h1 {
+        float: left;
+      }
+
+      #icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 20px;
+        margin-top: 100px;
+        border: 20px;
+        margin-left: 100px;
+      }
+
+      .streettacos {
+        display: flex;
+        justify-content: center;
+      }
+
+      #street {
+        text-align: justify;
+        max-width: fit-content;
+      }
+
+      footer img {
+        width: 300px;
+      }
+      #directions{
+        margin-left: 250px;
+      }
+
 }
 
-@media screen and (min-width: 1200px) {
-    .menu {
+@media screen and (min-width: 1280px) {
+    .menu img{
         width: 50px;
-    }
-    .streettacos {
-        flex: left;
     }
 
     footer img{
@@ -255,14 +343,76 @@ footer img{
     #details{
         background-color: var(--black);
         color: var(--teal);
+        padding-top: 5px;
+    }
+
+    .time {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     #details p {
-        display: inline-flex;
+        display: inline;
+        text-align: center;
+        justify-content: center;
+        margin-left: 75px;
     }
     
     .streettacos {
         width: 600px;
-        margin-left: 100px
+    }
+
+    #ingredients {
+        float: left;
+        margin-right: 50px;
+    }
+
+    #ingredients h2 {
+        margin-left: 75px;
+    }
+
+    h1 {
+        margin-left: 550px;
+    }
+
+    #dishes {
+        margin-top: 200px;
+        padding-top: 5px;
+    }
+
+    #dish-col{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .ft{
+        float: left;
+        display: block;
+    }
+    footer svg {
+        float: right;
+    }
+
+    .streettacos {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #icons {
+        border: 3px solid #EB5428;
+        margin-left: 20px;
+    }
+   
+}
+
+@media print {
+    body{
+        margin: 0.5in;
+        font-family: serif;
+    }
+    img {
+        display: none;
+        filter: grayscale(100%);
+    }
+    nav {
+        display: none;
     }
 }
