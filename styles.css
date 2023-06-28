@@ -173,10 +173,11 @@ footer img{
         justify-content: center;
       }
 
-      .street img {
+     .streettacos {
+      display: block;
         margin-right: auto;
         margin-left: auto;
-        max-width: fit-content;
+        width: 100%;
       }
       #dishes {
         padding-top: 10px;
