@@ -172,6 +172,12 @@ footer img{
         display: flex;
         justify-content: center;
       }
+
+      .street img {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: fit-content;
+      }
       #dishes {
         padding-top: 10px;
       }
